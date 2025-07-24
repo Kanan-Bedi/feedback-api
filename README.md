@@ -32,24 +32,7 @@ This is a simple Spring Boot REST API for collecting user feedback, storing it i
 ---
 
 ## Project Structure
-feedback-api/
-├── src/
-│ ├── main/
-│ │ ├── java/com/example/feedbackapi/
-│ │ │ ├── entity/Feedback.java
-│ │ │ ├── repository/FeedbackRepository.java
-│ │ │ ├── service/FeedbackService.java
-│ │ │ ├── controller/FeedbackController.java
-│ │ │ └── FeedbackApiApplication.java
-│ │ └── resources/
-│ │ └── application.properties
-│ └── test/
-│ ├── java/com/example/feedbackapi/
-│ │ ├── FeedbackApiApplicationTests.java
-│ │ ├── FeedbackControllerTest.java
-│ │ └── FeedbackServiceTest.java
-├── pom.xml
-└── README.md
+<pre> ``` feedback-api/ ├── src/ │ ├── main/ │ │ ├── java/com/example/feedbackapi/ │ │ │ ├── entity/Feedback.java │ │ │ ├── repository/FeedbackRepository.java │ │ │ ├── service/FeedbackService.java │ │ │ ├── controller/FeedbackController.java │ │ │ └── FeedbackApiApplication.java │ │ └── resources/ │ │ └── application.properties │ └── test/ │ ├── java/com/example/feedbackapi/ │ │ ├── FeedbackApiApplicationTests.java │ │ ├── FeedbackControllerTest.java │ │ └── FeedbackServiceTest.java ├── pom.xml └── README.md ``` </pre>
 
 ---
 
@@ -72,7 +55,8 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
 ### Run Tests
-```mvn test
+```bash
+mvn test```
 
 Includes:
 - Controller tests for POST/GET and validation errors
@@ -81,9 +65,11 @@ Includes:
 
 Example API Usage
 POST feedback:
-```curl -X POST http://localhost:8080/feedback \
+```bash
+curl -X POST http://localhost:8080/feedback \
   -H "Content-Type: application/json" \
-  -d '{"name":"Kanan","email":"kanan@example.com","message":"This is my feedback!"}'
+  -d '{"name":"Kanan","email":"kanan@example.com","message":"This is my feedback!"}'```
 
 GET all feedback:
-```curl http://localhost:8080/feedback
+```bash
+curl http://localhost:8080/feedback```
