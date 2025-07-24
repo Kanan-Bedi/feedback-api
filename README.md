@@ -32,7 +32,26 @@ This is a simple Spring Boot REST API for collecting user feedback, storing it i
 ---
 
 ## Project Structure
-<pre> ``` feedback-api/ ├── src/ │ ├── main/ │ │ ├── java/com/example/feedbackapi/ │ │ │ ├── entity/Feedback.java │ │ │ ├── repository/FeedbackRepository.java │ │ │ ├── service/FeedbackService.java │ │ │ ├── controller/FeedbackController.java │ │ │ └── FeedbackApiApplication.java │ │ └── resources/ │ │ └── application.properties │ └── test/ │ ├── java/com/example/feedbackapi/ │ │ ├── FeedbackApiApplicationTests.java │ │ ├── FeedbackControllerTest.java │ │ └── FeedbackServiceTest.java ├── pom.xml └── README.md ``` </pre>
+```bash
+# Project Structure
+feedback-api/
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/feedbackapi/
+│   │   │   ├── entity/Feedback.java
+│   │   │   ├── repository/FeedbackRepository.java
+│   │   │   ├── service/FeedbackService.java
+│   │   │   ├── controller/FeedbackController.java
+│   │   │   └── FeedbackApiApplication.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       ├── java/com/example/feedbackapi/
+│       │   ├── FeedbackApiApplicationTests.java
+│       │   ├── FeedbackControllerTest.java
+│       │   └── FeedbackServiceTest.java
+├── pom.xml
+└── README.md
 
 ---
 
@@ -56,20 +75,20 @@ spring.jpa.show-sql=true
 
 ### Run Tests
 ```bash
-mvn test```
+mvn test
 
-Includes:
+**Includes**:
 - Controller tests for POST/GET and validation errors
 - Service tests with Mockito
 - Application context load test
 
-Example API Usage
-POST feedback:
+### Example API Usage**
+**POST feedback**:
 ```bash
 curl -X POST http://localhost:8080/feedback \
   -H "Content-Type: application/json" \
-  -d '{"name":"Kanan","email":"kanan@example.com","message":"This is my feedback!"}'```
+  -d '{"name":"Kanan","email":"kanan@example.com","message":"This is my feedback!"}'
 
-GET all feedback:
+**GET all feedback**:
 ```bash
-curl http://localhost:8080/feedback```
+curl http://localhost:8080/feedback
