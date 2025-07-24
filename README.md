@@ -85,7 +85,7 @@ mvn test
 - Service tests with Mockito
 - Application context load test
 
-### Example API Usage**
+### Example API Usage
 **POST feedback**:
 ```bash
 curl -X POST http://localhost:8080/feedback \
