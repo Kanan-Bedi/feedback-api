@@ -60,7 +60,7 @@ feedback-api/
 ### Clone the repo
 ```bash
 git clone https://github.com/YOUR_USERNAME/feedback-api.git
-cd feedback-api
+cd feedback-api```
 
 ### Configure PostgreSQL
 - Create a database named feedback_db
