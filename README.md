@@ -60,7 +60,8 @@ feedback-api/
 ### Clone the repo
 ```bash
 git clone https://github.com/YOUR_USERNAME/feedback-api.git
-cd feedback-api```
+cd feedback-api
+```
 
 ### Configure PostgreSQL
 - Create a database named feedback_db
@@ -72,10 +73,12 @@ spring.datasource.username=YOUR_DB_USERNAME
 spring.datasource.password=YOUR_DB_PASSWORD
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+```
 
 ### Run Tests
 ```bash
 mvn test
+```
 
 **Includes**:
 - Controller tests for POST/GET and validation errors
@@ -88,7 +91,9 @@ mvn test
 curl -X POST http://localhost:8080/feedback \
   -H "Content-Type: application/json" \
   -d '{"name":"Kanan","email":"kanan@example.com","message":"This is my feedback!"}'
+```
 
 **GET all feedback**:
 ```bash
 curl http://localhost:8080/feedback
+```
